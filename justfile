@@ -6,6 +6,8 @@ output_dir := "./output"
 default_first := "0"
 default_last := "5001"
 default_file := "./data/email/inbox/Form_12_mbox.mbox"
+default_outname := "fac"
+default_inname := "fac.hs"
 
 # === DEFAULT ===
 default: list
@@ -43,7 +45,9 @@ projects:
 
 # List tasks
 task-list:
-  @tas list
+  @task list
 
 # Hello
+compile-haskell outfile=default_outname infile=default_inname:
+  @ghc -o {{outfile}} {{infile}}
 

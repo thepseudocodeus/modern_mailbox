@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+PATH="$1"
+DIRECTORY="$2"
+DIRECTORYPATH="$PATH/$DIRECTORY"
+
+mkdir -p "$DIRECTORYPATH"
